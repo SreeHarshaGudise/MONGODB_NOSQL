@@ -1,0 +1,115 @@
+windows mongodb
+
+how to enter into shell in mongodb
+
+go for path in programfiles of mongodb bin directory and run mongod.exe
+
+cd /ProgramFiles/MongoDb/Server/3.4/bin/mongod.exe
+
+
+cd /ProgramFiles/MongoDb/Server/3.4/bin/mongo.exe
+
+
+After typing these paths we will enter into mongodb shell
+where we write shell based commands on it
+
+use database name for creating database automatically
+
+use database-name
+
+to check the database present or not use command
+>db
+
+to check using command show dbs we need to enter a atleast row in it
+ db.employee.insert({"name":"Krishna"})
+it creates a employee table using insert command
+then go for show dbs ccommand
+
+>show dbs
+
+To check the collections  in the table 
+> show collections
+
+if you want to drop the database you need to use it first and  drop using drop command
+> use local
+local created
+>db.dropDatabase()
+database dropped
+
+To enter values into table we need to use command as follows
+>db.collection_name.insert(document)
+
+
+>db.employee.insert({
+
+_id : 'Emp001',
+
+fname: 'Sanjay',
+
+lname: 'Garg',
+
+dob : new Date ("1972-06-20"),
+
+doj : new Date ("2016-04-01"),
+
+address : [
+
+{
+
+Block : '2/20',
+
+Street : '4th Avenue',
+
+City : 'Bangalore',
+
+State : 'karnataka',
+
+pin : '560037'
+
+}
+
+]
+
+})
+
+db.employee.insert({
+
+_id : 'Emp002',
+
+fname: 'Rajiv',
+
+lname: 'Kumar',
+
+dob : new Date ("1972-06- 20"),
+
+doj : new Date ("2016-04- 01"),
+
+address : [
+
+{
+
+Block : '4/801',
+
+Street : '3rd Road',
+
+City : 'Mumbai',
+
+State : 'Maharashtra',
+
+pin : '40000'
+
+}
+
+]
+
+})
+
+
+To show the values we use find 
+>db.employee.find()
+here employee is Collection_name
+it show details of collection in unstructured form
+
+>db.employee.find().pretty()
+here it shows the collection details in sturctured way
+
